@@ -2,10 +2,10 @@
   "name": "b2bzanden/sitemapurl",
   "license": "OSL-3.0",
   "type": "magento2-module",
-  "homepage": "https://github.com/hans2103/B2bzanden_M2_SitemapUrl",
+  "homepage": "https://github.com/B2bzanden/B2bzanden_M2_SitemapUrl",
   "description": "Magento 2 module for Sitemap Url",
   "keywords":[ "composer-installer", "magento"],
-  "version": "1.0.0",
+  "version": "2.0.0",
   "require": {
     "php": ">=7.1.0"
   },
