@@ -56,7 +56,7 @@ class Product
             $storeUrl = $this->_storeManager->getStore($storeId)->getBaseUrl();
 
             $fullProductUrl = $product->getProductUrl();
-            $productUrlPath = str_replace($storeUrl, "", $fullProductUrl);
+            $productUrlPath = str_replace($storeUrl, "", (string) $fullProductUrl);
 
             $productUrls[$productId] = $productUrlPath;
         }
@@ -65,8 +65,8 @@ class Product
         $collection = $result;
         foreach ($collection as $item) {
             $productId = (string)$item->getId();
-            if ($replacementUrl = $productUrls[$productId]) {
-                $item->setUrl($replacementUrl);
+            if (!empty($productUrls[$productId])) {
+                $item->setUrl($productUrls[$productId]);
             }
         }
 
